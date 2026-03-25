@@ -197,6 +197,49 @@ collection at `jpmc-ai-platform@jpmc.com`
 
 ---
 
+## Observability & Trace Output
+
+The skill integrates with OpenTelemetry and Jaeger for distributed tracing.  
+Every code review invocation creates a trace with structured telemetry data.
+
+### Example Trace Timeline
+
+When you invoke the skill, Jaeger captures:
+
+![Skill Execution Trace](./images/skill-trace-example.png)
+
+**Trace Details:**
+- **Service:** jpmc.ai-skills.code-reviewer
+- **Operation:** skill.completion
+- **Duration:** 48µs (captured in this example)
+- **Status:** OK (success)
+- **Metrics captured:**
+  - invoke_duration_ms: Total execution time in milliseconds
+  - prompt_char_count: Characters sent to Claude
+  - response_char_count: Characters in the code review response
+  - otel.status_code: Execution status (OK/ERROR)
+
+### Accessing the Trace
+
+To view your code review traces:
+
+1. Make sure Jaeger is running:
+   ```bash
+   docker run -d --name jaeger \
+     -p 4318:4318 \
+     -p 16686:16686 \
+     jaegertracing/all-in-one:latest
+   ```
+
+2. Open the Jaeger UI at http://localhost:16686
+
+3. Search for service: `jpmc.ai-skills.code-reviewer`
+
+4. Select a trace to view the complete execution timeline, 
+   span details, and telemetry tags
+
+---
+
 ## Updating the Skill
 
 When the JPMC AI Platform Team publishes a new version:
