@@ -330,6 +330,20 @@ jpmc-skill-consumer/
 
 ---
 
+## Testing the Skill
+
+Use this prompt to verify the skill is working correctly after installation:
+
+```
+Review src/user_service.py for security vulnerabilities
+and JPMC coding standard violations
+```
+
+Run this against `src/user_service.py` which is included in this repo as sample code.
+A correctly installed skill will return a structured report with findings, severities, and fixes.
+
+---
+
 ## Support
 
 For issues with the skill or telemetry system contact the  
