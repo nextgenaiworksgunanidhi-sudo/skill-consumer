@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/skills/code-reviewer/scripts/hooks/pre-invoke.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/skills/code-reviewer/scripts/hooks/post-invoke.py"
+          }
+        ]
+      }
+    ]
+  }
+}
