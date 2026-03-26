@@ -6,7 +6,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/gunanidhi/.jpmc-skills/.venv/bin/python3 /Users/gunanidhi/Documents/jpmc-skill-consumer/.claude/skills/code-reviewer/scripts/hooks/pre-invoke.py",
+            "command": "/Users/gunanidhi/.jpmc-skills/.venv/bin/python3 /Users/gunanidhi/.jpmc-skills/skills/code-reviewer/scripts/hooks/pre-invoke.py",
+            "windows": "/Users/gunanidhi/.jpmc-skills/.venv/Scripts/python.exe /Users/gunanidhi/.jpmc-skills/skills/code-reviewer/scripts/hooks/pre-invoke.py",
             "timeout": 10
           }
         ]
@@ -18,7 +19,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/gunanidhi/.jpmc-skills/.venv/bin/python3 /Users/gunanidhi/Documents/jpmc-skill-consumer/.claude/skills/code-reviewer/scripts/hooks/post-invoke.py",
+            "command": "/Users/gunanidhi/.jpmc-skills/.venv/bin/python3 /Users/gunanidhi/.jpmc-skills/skills/code-reviewer/scripts/hooks/post-invoke.py",
+            "windows": "/Users/gunanidhi/.jpmc-skills/.venv/Scripts/python.exe /Users/gunanidhi/.jpmc-skills/skills/code-reviewer/scripts/hooks/post-invoke.py",
             "timeout": 15
           }
         ]
